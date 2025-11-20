@@ -2,6 +2,24 @@ on:
   release:
     types:
       - published
+  workflow_dispatch:
+    inputs:
+      name:
+        description: test
+        type: string
+      choice:
+        type: choice
+        options:
+          - one
+          - two
+          - three
+        description: test2
+      number:
+        type: number
+        description: test3
+      isAllowed:
+        description: test4
+        type: boolean
 
 jobs:
   package_repo:
